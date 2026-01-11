@@ -3,32 +3,43 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <vector>
 
-const char* HOSTS_PATH = "C:\\Windows\\System32\\drivers\\etc\\hosts";
-
-int main(){
-    std::vector<std::string> lines = {"127.0.0.1 www.bilibili.com", "127.0.0.1 www.douyin.com"};
+int main()
+{
+    auto HOSTS_PATH = "C:\\Windows\\System32\\drivers\\etc\\hosts";
+    auto lines = {
+        "1.2.3.4 www.bilibili.com",
+        "1.2.3.4 www.douyin.com",
+        "1.2.3.4 www.kuaishou.com",
+        "1.2.3.4 www.kuaishou.cn"};
     std::string content;
-    {
         std::ifstream in(HOSTS_PATH);
-        if(!in){ std::cerr << "Cannot open hosts file (run as admin)\n"; return 1; }
-        std::ostringstream ss; ss << in.rdbuf(); content = ss.str();
-    }
+        if (!in)
+        {
+            std::cerr << "Cannot open hosts file (run as admin)\n";
+            system("pause");
+            return 1;
+        }
+        std::ostringstream ss;
+        ss << in.rdbuf();
+        content = ss.str();
 
-    bool changed = false;
-    for(const auto &ln : lines){
-        if(content.find(ln) == std::string::npos){
+    auto changed = false;
+    for (auto &ln : lines)
+    {
+        if (content.find(ln) == std::string::npos)
+        {
             std::ofstream out(HOSTS_PATH, std::ios::app);
-            if(!out){ std::cerr << "Cannot write to hosts file (permission)\n"; return 2; }
+            if (!out)
+            {
+                std::cerr << "Cannot write to hosts file (permission)\n";
+                system("pause");
+                return 2;
+            }
             out << ln << "\r\n";
             changed = true;
         }
     }
-
-    if(changed){
-        // flush DNS cache
-        system("ipconfig /flushdns >nul 2>&1");
-    }
+    system("ipconfig /flushdns");
     return 0;
 }
