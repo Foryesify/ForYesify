@@ -3,35 +3,29 @@
 Welcome to my overview 👋
 
 I'm a senior high school student living in China.
-I have a little experience in C++ and web development.
-And a Chinese Chess AI project called [Chess98](https://github.com/StarlightChessOrg/Chess98) is now developing by my friend and I. If you are interested in that welcome to have a look.
-
-## 🛠️ Tech Stack
-
-Something I like:
-
-- Languages: JS, Lua, C++, Python, ...
-- Development Preferences: Web, AI, Cross-Platform, ...
-- Interested in: PyTorch, Full-Stack Web, Windows, ...
 
 ## 🚀 Projects
 
-Some projects of mine:
+Here are my projects on GitHub.
 
-- Chess98 ❄️: A powerful Chinese Chess AI.
+- Chess98 ⚔️ (Completed) - A powerful Chinese Chess AI.
+- ChessUI ❄️ (Deving) - A UI app for UCI and UCCI engine.
+- SilentWrite ✏️ (Deving) - A simple and clear Markdown writing tool.
+- Yesdevelop 🎵 (Personal) - My GitHub overview repository which contains some useful code of mine.
+
+## 🛠️ Tech
+
+Frontend things like react and vue are intersting and I also have a little experience in c++ as well as py.
+Outside of coding I like playing chess on lichess and xiangqicom, a great Chinese Chess website founded by Paul English.
 
 ## 📫 Connect
 
-You can connect me through them:
+You can connect me directly through yes-noob at outlook.
+And welcome to play chess or xiangqi with me via LiChess and Xiangqi, and my account is both @Yes-Noob.
 
-- GitHub: @yesdevelop
-- Email: yes-noob@outlook.com
-- Xiangqi.com: @Yes-Noob
-- QQ: 2820795095
+## ❤️ Friends
 
-## ❤️ My Friends
-
-Here are my friends, I have deep communication with them:
+Here are my deep friends~
 
 - HeliumAreFlying https://github.com/HeliumAreFlying
 - Imitoy https://github.com/imitoy
