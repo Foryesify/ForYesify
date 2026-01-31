@@ -1,6 +1,5 @@
-// Simple program: appends two hosts entries and flushes DNS
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -11,18 +10,19 @@ int main()
         "1.2.3.4 www.bilibili.com",
         "1.2.3.4 www.douyin.com",
         "1.2.3.4 www.kuaishou.com",
-        "1.2.3.4 www.kuaishou.cn"};
+        "1.2.3.4 www.kuaishou.cn",
+    };
     std::string content;
-        std::ifstream in(HOSTS_PATH);
-        if (!in)
-        {
-            std::cerr << "Cannot open hosts file (run as admin)\n";
-            system("pause");
-            return 1;
-        }
-        std::ostringstream ss;
-        ss << in.rdbuf();
-        content = ss.str();
+    std::ifstream in(HOSTS_PATH);
+    if (!in)
+    {
+        std::cerr << "Cannot open hosts file (run as admin)\n";
+        system("pause");
+        return 1;
+    }
+    std::ostringstream ss;
+    ss << in.rdbuf();
+    content = ss.str();
 
     auto changed = false;
     for (auto &ln : lines)
