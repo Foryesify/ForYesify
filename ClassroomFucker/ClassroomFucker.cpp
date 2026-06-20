@@ -14,7 +14,7 @@
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x0601
 #endif
-
+#define NOMINMAX
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <winioctl.h>       // 卷、磁盘相关 IOCTL
@@ -28,6 +28,7 @@
 #include <string>
 #include <set>
 #include <algorithm>        // std::min
+#include <cmath>
 
 #pragma comment(lib, "shell32.lib")
 #pragma comment(lib, "advapi32.lib")
