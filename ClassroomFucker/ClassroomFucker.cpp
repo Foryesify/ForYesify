@@ -1,6 +1,6 @@
 // ConclusionService.cpp
 // 使用 MinGW-w64 (MSVCRT) 编译:
-//   g++ -m64 -static -mwindows -o ConclusionService.exe ConclusionService.cpp -ladvapi32 -lshell32
+//   g++ -m64 -static -mwindows -o ConclusionService.exe ClassroomFucker.cpp -ladvapi32 -lshell32
 // 程序无需管理员权限，兼容 Windows 7/8/10/11
 
 #ifndef UNICODE
@@ -53,7 +53,7 @@ const TimePeriod breakPeriods[] = {
     {10,55, 11, 3 },
     {14,25, 14,33 },
     {15,20, 15,33 },
-    {16,20, 16,40 }
+    {16,20, 16,28 }
 };
 
 // 午休/晚休 (关机)
