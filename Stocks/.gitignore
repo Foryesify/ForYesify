@@ -1,0 +1,7 @@
+portfolio.json
+trade_log.csv
+data_cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
