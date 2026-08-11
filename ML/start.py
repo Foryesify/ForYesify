@@ -31,7 +31,5 @@ print("\nTrained OK")
 with torch.no_grad():
     final_output = net(my_input)
 
-# 改这里：目标保留两位小数
 print("Target:", [f"{x:.2f}" for x in my_target.numpy()])
-# 改这里：预测保留两位小数
 print("Fact:  ", [f"{x:.2f}" for x in final_output.numpy()])
