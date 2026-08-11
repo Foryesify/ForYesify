@@ -1,0 +1,130 @@
+{
+  "initialized": true,
+  "cash": {
+    "CNY": 5000.0,
+    "HKD": 16.320000000000164,
+    "USD": 479.99996699999997
+  },
+  "holdings": [
+    {
+      "id": 1,
+      "symbol": "AAPL",
+      "name": "苹果",
+      "market": "US",
+      "buy_price": 308.26,
+      "shares": 0.778564
+    },
+    {
+      "id": 2,
+      "symbol": "GOOG",
+      "name": "谷歌",
+      "market": "US",
+      "buy_price": 355.84,
+      "shares": 0.67446
+    },
+    {
+      "id": 3,
+      "symbol": "MSFT",
+      "name": "微软",
+      "market": "US",
+      "buy_price": 506.06,
+      "shares": 0.474252
+    },
+    {
+      "id": 4,
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "market": "US",
+      "buy_price": 217.55,
+      "shares": 1.103195
+    },
+    {
+      "id": 5,
+      "symbol": "SPCX",
+      "name": "SpaceX",
+      "market": "US",
+      "buy_price": 138.74,
+      "shares": 1.729854
+    },
+    {
+      "id": 6,
+      "symbol": "NET",
+      "name": "NET",
+      "market": "US",
+      "buy_price": 310.59,
+      "shares": 0.772723
+    },
+    {
+      "id": 7,
+      "symbol": "P",
+      "name": "P",
+      "market": "US",
+      "buy_price": 97.98,
+      "shares": 2.449479
+    },
+    {
+      "id": 8,
+      "symbol": "AMAT",
+      "name": "应用材料",
+      "market": "US",
+      "buy_price": 522.12,
+      "shares": 0.229832
+    },
+    {
+      "id": 9,
+      "symbol": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "buy_price": 469.56,
+      "shares": 0.255558
+    },
+    {
+      "id": 10,
+      "symbol": "GE",
+      "name": "GE航空航天",
+      "market": "US",
+      "buy_price": 366.7,
+      "shares": 0.327243
+    },
+    {
+      "id": 11,
+      "symbol": "BA",
+      "name": "波音",
+      "market": "US",
+      "buy_price": 232.79,
+      "shares": 0.515486
+    },
+    {
+      "id": 12,
+      "symbol": "PEP",
+      "name": "百事可乐",
+      "market": "US",
+      "buy_price": 137.73,
+      "shares": 0.87127
+    },
+    {
+      "id": 13,
+      "symbol": "HD",
+      "name": "家得宝",
+      "market": "US",
+      "buy_price": 350.78,
+      "shares": 0.342095
+    },
+    {
+      "id": 14,
+      "symbol": "SBUX",
+      "name": "星巴克",
+      "market": "US",
+      "buy_price": 104.65,
+      "shares": 1.146679
+    },
+    {
+      "id": 15,
+      "symbol": "01810",
+      "name": "小米集团－Ｗ",
+      "market": "HK",
+      "buy_price": 26.88,
+      "shares": 111.0
+    }
+  ]
+}
