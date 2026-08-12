@@ -41,6 +41,9 @@ python Stocks.py --list
   ID: 1, NAME: xxx CN|HK|US, PRICE: xxx, YESTERDAY: +|-xxx, RETURN_TOTAL: +|-xxx%
   ID: 2, NAME: xxx CN|HK|US, PRICE: xxx, YESTERDAY: +|-xxx, RETURN_TOTAL: +|-xxx%
   ID: 3, NAME: xxx CN|HK|US, PRICE: xxx, YESTERDAY: +|-xxx, RETURN_TOTAL: +|-xxx%
+python Stocks.py --total
+  TOTAL: CNY +|-xxx (+|-xxx%), HKD +|-xxx (+|-xxx%), USD +|-xxx (+|-xxx%)
+  failed, reason: xxx
 python Stocks.py --buy STOCK_NAME --in CN|HK|US --amount xxx （若amount不足且不支持碎股则拒绝）
   success, ID: xxx
   failed, reason: xxx

@@ -1,7 +1,7 @@
 {
   "initialized": true,
   "cash": {
-    "CNY": 5000.0,
+    "CNY": 150.0,
     "HKD": 16.320000000000164,
     "USD": 479.99996699999997
   },
@@ -125,6 +125,30 @@
       "market": "HK",
       "buy_price": 26.88,
       "shares": 111.0
+    },
+    {
+      "id": 16,
+      "symbol": "300059",
+      "name": "东方财富",
+      "market": "CN",
+      "buy_price": 19.77,
+      "shares": 100.0
+    },
+    {
+      "id": 17,
+      "symbol": "601988",
+      "name": "中国银行",
+      "market": "CN",
+      "buy_price": 5.84,
+      "shares": 300.0
+    },
+    {
+      "id": 18,
+      "symbol": "000001",
+      "name": "平安银行",
+      "market": "CN",
+      "buy_price": 11.21,
+      "shares": 100.0
     }
   ]
 }

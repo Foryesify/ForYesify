@@ -7,6 +7,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from config import INITIAL_CASH, MARKET_CURRENCY
 from portfolio import Portfolio, PortfolioError
 from quotes import QuoteError, get_quote
 
@@ -22,6 +23,11 @@ def fmt_return_pct(buy_price: float, current_price: float) -> str:
     pct = (current_price - buy_price) / buy_price * 100
     sign = "+" if pct >= 0 else ""
     return f"{sign}{pct:.2f}%"
+
+
+def fmt_signed_pct(value: float) -> str:
+    sign = "+" if value >= 0 else ""
+    return f"{sign}{value:.2f}%"
 
 
 def print_cash(portfolio: Portfolio) -> None:
@@ -58,6 +64,33 @@ def cmd_list(portfolio: Portfolio) -> int:
         )
 
     print_cash(portfolio)
+    return 0
+
+
+def cmd_total(portfolio: Portfolio) -> int:
+    holdings_value = {currency: 0.0 for currency in INITIAL_CASH}
+
+    for holding in portfolio.holdings:
+        try:
+            quote = get_quote(holding.market, holding.symbol)
+        except QuoteError as exc:
+            print(
+                "failed, reason: "
+                f"无法计算总收益，{holding.symbol} ({holding.market}) 行情获取失败: {exc}"
+            )
+            return 1
+        currency = MARKET_CURRENCY[holding.market]
+        holdings_value[currency] += quote.price * holding.shares
+
+    parts: list[str] = []
+    for currency in ("CNY", "HKD", "USD"):
+        initial = INITIAL_CASH[currency]
+        current = portfolio.cash[currency] + holdings_value[currency]
+        profit = current - initial
+        pct = profit / initial * 100 if initial > 0 else 0.0
+        parts.append(f"{currency} {fmt_signed(profit)} ({fmt_signed_pct(pct)})")
+
+    print(f"TOTAL: {', '.join(parts)}")
     return 0
 
 
@@ -98,6 +131,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="模拟股票交易 CLI")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--list", action="store_true", help="列出当前持仓")
+    group.add_argument("--total", action="store_true", help="计算当前总收益")
     group.add_argument("--buy", metavar="STOCK_NAME", help="模拟买入股票")
     group.add_argument("--sell", metavar="ID", type=int, help="按 ID 卖出持仓")
     parser.add_argument(
@@ -133,6 +167,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.list:
         return cmd_list(portfolio)
+
+    if args.total:
+        return cmd_total(portfolio)
 
     if args.buy:
         if not args.market:
